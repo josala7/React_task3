@@ -6,5 +6,7 @@ export const login = async (loginData) => {
       'Content-Type': 'application/json'
     }
   })
+  localStorage.setItem('isLoggedIn', true)
+  localStorage.setItem('userData', JSON.stringify(loginData))
   return response.data
 }
